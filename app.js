@@ -13,3 +13,19 @@ const winPtterns = [
   [3, 4, 5],
   [6, 7, 8],
 ];
+
+boxes.forEach((box) => {
+  box.addEventListener("click", () => {
+    console.log("box was clicked");
+    if (turnO === true) {
+      //playerO
+      box.innerText = "0";
+      turnO = false;
+    } else {
+      //playerX
+      box.innerText = "X";
+      turnO = true;
+    }
+    box.disabled = true;
+  });
+});
