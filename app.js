@@ -35,9 +35,16 @@ boxes.forEach((box) => {
   });
 });
 
+const disableBoxes = () => {
+  for (let box of boxes) {
+    box.disabled = true;
+  }
+};
+
 const showWinner = (winner) => {
   msgContainer.classList.remove("hide");
   msg.innerText = `Congrats!, Winner is ${winner}`;
+  disableBoxes();
 };
 
 const checkWinner = () => {
@@ -57,5 +64,3 @@ const checkWinner = () => {
     }
   }
 };
-
-
